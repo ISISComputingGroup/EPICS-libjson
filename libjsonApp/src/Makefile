@@ -14,7 +14,10 @@ LIBRARY_IOC += libjson
 #DBDINC += xxxRecord
 # install libjson.dbd into <top>/dbd
 DBD += libjson.dbd
-USR_CXXFLAGS += -DNDEBUG
+INC += libjson.h JSONOptions.h _internal/Source/JSONDefs.h \
+	_internal/Source/JSONDefs/GNU_C.h _internal/Source/JSONDefs/Unknown_C.h _internal/Source/JSONDefs/Visual_C.h _internal/Source/JSONDefs/Strings_Defs.h
+
+USR_CXXFLAGS += -DLIBJSON_EXPORTS
 # specify all source files to be compiled and added to the library
 libjson_SRCS += internalJSONNode.cpp JSONAllocator.cpp JSONChildren.cpp \
                  JSONDebug.cpp JSONIterators.cpp JSONMemory.cpp JSONNode.cpp \
@@ -28,4 +31,3 @@ libjson_LIBS += $(EPICS_BASE_IOC_LIBS)
 include $(TOP)/configure/RULES
 #----------------------------------------
 #  ADD RULES AFTER THIS LINE
-
