@@ -1,4 +1,4 @@
-TOP = ../../../..
+TOP = ../..
 
 # OS=$(shell uname)
 # ifeq ($(OS), Darwin)
@@ -32,6 +32,7 @@ DBD += $(APPNAME).dbd
 $(APPNAME)_DBD += base.dbd
 
 $(APPNAME)_LIBS += libjson
+USR_INCLUDES += -I $(TOP)/libjsonApp/src/_internal/Source
 
 # libjsonTest_registerRecordDeviceDriver.cpp derives from libjsonTest.dbd
 
@@ -47,8 +48,7 @@ $(APPNAME)_SRCS += TestAssign.cpp TestChildren.cpp \
 	TestWriter.cpp TestString.cpp UnitTest.cpp \
 	TestStreams.cpp TestBinary.cpp \
 	TestSharedString.cpp \
-#TestValidator was removed as not linking correctly	
-	
+
 # Build the main IOC entry point on workstation OSs.
 $(APPNAME)_SRCS_DEFAULT += main.cpp
 #$(APPNAME)_SRCS_DEFAULT += main.cpp

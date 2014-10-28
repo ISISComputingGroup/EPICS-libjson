@@ -6,7 +6,7 @@
 void DoTests(void);
 void DoTests(void){
     TestSuite::TestStreams();
-    //TestSuite::TestValidator(); //Validator not linking correctly
+    //TestSuite::TestValidator();
     TestSuite::TestString();
     TestSuite::TestConverters();
     #ifdef JSON_BINARY
