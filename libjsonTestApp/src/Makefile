@@ -36,8 +36,6 @@ USR_INCLUDES += -I $(TOP)/libjsonApp/src/_internal/Source
 
 # libjsonTest_registerRecordDeviceDriver.cpp derives from libjsonTest.dbd
 
-USR_CXXFLAGS += -DLIBJSON_EXPORTS
-
 $(APPNAME)_SRCS += $(APPNAME)_registerRecordDeviceDriver.cpp
 
 $(APPNAME)_SRCS += TestAssign.cpp TestChildren.cpp \

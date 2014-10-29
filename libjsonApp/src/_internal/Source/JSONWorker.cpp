@@ -1,6 +1,11 @@
 #include "JSONWorker.h"
+#ifdef LIBJSON_EXPORTS
+#include <epicsExport.h>
+#else
+#include <shareLib.h>
+#endif
 
-bool used_ascii_one = false;  //used to know whether or not to check for intermediates when writing, once flipped, can't be unflipped
+epicsShareExtern bool used_ascii_one = false;  //used to know whether or not to check for intermediates when writing, once flipped, can't be unflipped
 inline json_char ascii_one(void) json_nothrow {
 	used_ascii_one = true;
 	return JSON_TEXT('\1');

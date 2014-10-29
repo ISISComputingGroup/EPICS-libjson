@@ -1,7 +1,13 @@
 #include "TestSuite.h"
 
+#ifdef LIBJSON_EXPORTS
+#include <epicsExport.h>
+#else
+#include <shareLib.h>
+#endif
+
 #ifdef JSON_WRITE_PRIORITY
-	bool used_ascii_one;
+	epicsShareExtern bool used_ascii_one;
 	
 	void myDoTests(bool asciichar);
 	void myDoTests(bool asciichar){
