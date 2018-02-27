@@ -1,4 +1,3 @@
-#comment to force a git update
 # optional extra local definitions here
 -include $(TOP)/configure/RELEASE.private
 
