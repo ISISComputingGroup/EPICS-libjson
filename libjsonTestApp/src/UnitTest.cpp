@@ -10,7 +10,7 @@ std::vector<std::string> All;
 bool ReturnOnFail = false;
 bool Echo = true;
 std::string Prefix;
-clock_t started = 0;
+static clock_t started = 0;
 #if (!defined(CLOCKS_PER_SEC))
     #define noTimeFormatting
 #endif
