@@ -56,7 +56,7 @@
 
     //#define json_nothrow throw()
     //#define json_throws(x) throw(x)
-    #define json_nothrow noexcept()
+    #define json_nothrow noexcept
     #define json_throws(x) noexcept(false)
 
     #ifdef JSON_LESS_MEMORY
